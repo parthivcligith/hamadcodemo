@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { createPortal } from "react-dom"
 
 export default function Preloader() {
   const [visible, setVisible] = useState(true)
@@ -45,19 +46,27 @@ export default function Preloader() {
     }
   }, [visible])
 
+  // Ensure page is at top on reload/mount
+  useEffect(() => {
+    try {
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, [])
+
   if (!visible) return null
 
-  return (
+  const preloader = (
     <div
       role="status"
       aria-live="polite"
       style={{
         position: "fixed",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: 70,
+        inset: 0,
+        zIndex: 99999,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -149,4 +158,10 @@ export default function Preloader() {
       `}</style>
     </div>
   )
+
+  if (typeof document !== "undefined") {
+    return createPortal(preloader, document.body)
+  }
+
+  return null
 }
