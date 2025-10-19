@@ -76,6 +76,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${headingFont.variable} ${bodyFont.variable} antialiased`}>
+      <head>
+        {/* Prevent pinch-zoom on mobile; note: this impacts accessibility (users can't zoom) */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+      </head>
       <body className={`${bodyFont.className} font-sans antialiased`}>
         <Preloader />
         <Suspense fallback={<div>Loading...</div>}>
@@ -84,6 +88,33 @@ export default function RootLayout({
         </Suspense>
         <BackToTop />
         <SiteFooter />
+        {/* Inline script to block common zoom shortcuts (ctrl/meta + wheel, ctrl/meta + +/-). */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(() => {
+  function preventZoom(e) {
+    try {
+      if (e.ctrlKey || e.metaKey) {
+        // block wheel + ctrl/meta
+        if (e.type === 'wheel') {
+          e.preventDefault();
+          return;
+        }
+        // block key combos like Ctrl+Plus/Ctrl+-/Ctrl+0
+        var k = e.key || e.code || '';
+        if (k === '+' || k === '-' || k === '=' || k === '0' || k === 'Equal' || k === 'NumpadAdd' || k === 'NumpadSubtract' || e.keyCode === 61 || e.keyCode === 173 || e.keyCode === 187 || e.keyCode === 189) {
+          e.preventDefault();
+        }
+      }
+    } catch (err) {
+      // ignore
+    }
+  }
+  window.addEventListener('keydown', preventZoom, { passive: false });
+  window.addEventListener('wheel', function (e) { if (e.ctrlKey || e.metaKey) e.preventDefault(); }, { passive: false });
+})();`,
+          }}
+        />
       </body>
     </html>
   )
