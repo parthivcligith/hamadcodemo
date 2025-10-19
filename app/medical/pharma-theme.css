@@ -1,0 +1,57 @@
+/* Updated pharmaceutical page theme to dark navy/teal color scheme */
+:root {
+  --pharma-primary: #163764;
+  --pharma-secondary: #0c6f53;
+  --pharma-light-bg: #0f1b2e;
+  --pharma-card-bg: #1a2a3f;
+  --pharma-border: #2d3e52;
+  --pharma-text: #ffffff;
+  --pharma-text-light: #b0b8c1;
+}
+
+/* Pharmaceutical page specific tile styling */
+.pharma-tile {
+  background-color: var(--pharma-card-bg);
+  border-color: var(--pharma-border);
+}
+
+.pharma-tile-gradient {
+  background: linear-gradient(135deg, rgba(22, 55, 100, 0.25) 0%, rgba(12, 111, 83, 0.25) 100%);
+}
+
+.pharma-section {
+  background-color: var(--pharma-light-bg);
+}
+
+.pharma-heading {
+  color: var(--pharma-primary);
+}
+
+.pharma-accent {
+  color: var(--pharma-secondary);
+}
+
+.pharma-icon-bg {
+  background-color: rgba(22, 55, 100, 0.2);
+}
+
+.pharma-icon {
+  color: var(--pharma-primary);
+}
+
+.pharma-button {
+  background-color: var(--pharma-primary);
+  color: white;
+}
+
+.pharma-button:hover {
+  background-color: rgba(22, 55, 100, 0.9);
+}
+
+.pharma-border-left {
+  border-left: 4px solid var(--pharma-primary);
+}
+
+.pharma-border-left-accent {
+  border-left: 4px solid var(--pharma-secondary);
+}

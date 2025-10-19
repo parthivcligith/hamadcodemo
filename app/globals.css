@@ -1,0 +1,271 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  /* Reverted to original beige/cream color scheme for home page */
+  --brand-beige: #fee3bd;
+  --brand-maroon: #92301a;
+  --brand-light-beige: #fef5e7;
+  --brand-off: #f5f7fa;
+  --brand-white: #ffffff;
+
+  /* Dedicated tile color variable - back to beige */
+  --tile-bg: #fee3bd;
+
+  /* Core tokens derived from original palette */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --card: var(--tile-bg);
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #2f2f2f;
+  --primary: #92301a;
+  --primary-foreground: #ffffff;
+  --secondary: #92301a;
+  --secondary-foreground: #ffffff;
+  --muted: var(--brand-off);
+  --muted-foreground: #4a4a4a;
+  --accent: #92301a;
+  --accent-foreground: #ffffff;
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+  --border: #e0e7f1;
+  --input: #e0e7f1;
+  --ring: color-mix(in oklab, #92301a 60%, #0000);
+  --chart-1: #92301a;
+  --chart-2: #d4a574;
+  --chart-3: #c9956f;
+  --chart-4: #b8845f;
+  --chart-5: #6b7280;
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #92301a;
+  --sidebar-primary: #92301a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #92301a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e0e7f1;
+  --sidebar-ring: color-mix(in oklab, #92301a 60%, #0000);
+}
+
+.dark {
+  --background: #0b1223;
+  --foreground: #f3f4f6;
+  --card: #0f172a;
+  --card-foreground: #f3f4f6;
+  --popover: #0f172a;
+  --popover-foreground: #f3f4f6;
+  --primary: #d4a574;
+  --primary-foreground: #0b1223;
+  --secondary: #c9956f;
+  --secondary-foreground: #0b1223;
+  --muted: #111827;
+  --muted-foreground: #9ca3af;
+  --accent: #b8845f;
+  --accent-foreground: #0b1223;
+  --border: #1f2937;
+  --input: #1f2937;
+  --ring: color-mix(in oklab, #d4a574 50%, #0000);
+  --sidebar: #0f172a;
+  --sidebar-foreground: #f3f4f6;
+  --sidebar-primary: #d4a574;
+  --sidebar-primary-foreground: #0b1223;
+  --sidebar-accent: #c9956f;
+  --sidebar-accent-foreground: #0b1223;
+  --sidebar-border: #1f2937;
+  --sidebar-ring: color-mix(in oklab, #d4a574 50%, #0000);
+}
+
+@theme inline {
+  --font-sans: var(--font-body, ui-sans-serif);
+  --font-serif: var(--font-heading, ui-serif);
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+  }
+
+  /* Reverted typography to use maroon color */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    color: #2f2f2f;
+    letter-spacing: 0.01em;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: clamp(1.75rem, 2.2rem + 1vw, 2.75rem);
+    line-height: 1.2;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: clamp(1.375rem, 1.6rem + 0.6vw, 2rem);
+    line-height: 1.25;
+  }
+  h3 {
+    font-weight: 600;
+    font-size: clamp(1.125rem, 1.2rem + 0.4vw, 1.5rem);
+    line-height: 1.3;
+  }
+  p,
+  li,
+  span {
+    font-family: var(--font-sans);
+    color: #2f2f2f;
+    line-height: 1.55;
+  }
+
+  /* Links accent */
+  a {
+    color: #92301a;
+  }
+  a:hover {
+    color: #7a2817;
+  }
+}
+
+@layer components {
+  /* Reverted button styles to use maroon color */
+  .hero-primary-btn,
+  .btn-primary-dark,
+  .btn-card-primary {
+    background-color: #92301a !important;
+    color: #ffffff !important;
+    border: 2px solid #92301a !important;
+  }
+  .hero-primary-btn:hover,
+  .btn-primary-dark:hover,
+  .btn-card-primary:hover {
+    background-color: #7a2817 !important;
+    border-color: #7a2817 !important;
+  }
+
+  .hero-secondary-btn,
+  .white-bg-button {
+    background-color: #ffffff !important;
+    color: #92301a !important;
+    border: 2px solid #92301a !important;
+  }
+  .hero-secondary-btn:hover,
+  .white-bg-button:hover {
+    background-color: #fef5e7 !important;
+    color: #92301a !important;
+    border-color: #92301a !important;
+  }
+
+  /* Reverted section backgrounds to use beige */
+  .section-warm {
+    background-color: var(--tile-bg);
+  }
+
+  .beige-card {
+    background-color: var(--tile-bg) !important;
+    color: #111111;
+  }
+  .beige-card-soft {
+    background-color: color-mix(in oklab, var(--tile-bg) 30%, #ffffff) !important;
+    color: #111111;
+  }
+  .section-alt-beige {
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--tile-bg) 36%, #ffffff) 0%,
+      color-mix(in oklab, var(--tile-bg) 22%, #ffffff) 60%,
+      transparent 100%
+    ) !important;
+  }
+
+  .bg-beige-page {
+    background-color: color-mix(in oklab, var(--tile-bg) 26%, #ffffff) !important;
+  }
+
+  .tile-bg-brand {
+    background-color: var(--tile-bg) !important;
+    color: #111111;
+  }
+  .tile-bg-soft {
+    background-color: color-mix(in oklab, var(--tile-bg) 30%, #ffffff) !important;
+    color: #111111;
+  }
+
+  .hero-section {
+    --tile-bg: unset !important;
+  }
+}
+
+@layer utilities {
+  .animate-fade-up,
+  .animate-marquee,
+  .animate-bounce,
+  .animate-pulse,
+  .animate-ping {
+    animation: none !important;
+  }
+
+  [class*="animate-"] {
+    animation: none !important;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  .section-alt-beige {
+    background: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--tile-bg) 6%, #ffffff) 0%,
+      color-mix(in oklab, var(--tile-bg) 2%, #ffffff) 60%,
+      transparent 100%
+    ) !important;
+  }
+
+  .bg-beige-page {
+    background-color: color-mix(in oklab, var(--tile-bg) 6%, #ffffff) !important;
+  }
+}
+
+.section-py {
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
