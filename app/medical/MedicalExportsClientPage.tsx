@@ -1051,7 +1051,7 @@ export default function MedicalExportsClientPage() {
                   }}
                   className="bg-white text-[#163764] font-medium px-4 py-2 rounded-md"
                 >
-                  Send Message
+                  
                 </button>
 
                 <button
@@ -1062,7 +1062,6 @@ export default function MedicalExportsClientPage() {
                   }}
                   className="bg-[#163764] text-white px-4 py-2 rounded-md"
                 >
-                  Chat on WhatsApp
                 </button>
               </div>
             </form>
