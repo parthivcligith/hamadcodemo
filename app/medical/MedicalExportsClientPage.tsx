@@ -3,6 +3,7 @@
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
+import { useState } from "react"
 import IslandNavbar from "@/components/island-navbar"
 import {
   BookOpen,
@@ -374,7 +375,7 @@ export default function MedicalExportsClientPage() {
               </div>
 
               <h1
-                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold mb-3 md:mb-6 animate-fade-up leading-tight px-2"
+                className="jsx-30a7fd2bf9dd3bca text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-serif font-semibold mb-3 md:mb-6 animate-fade-up leading-tight px-2"
                 style={{ color: "var(--brand-navy)" }}
               >
                 India's Trusted Medical Exporters to Africa
@@ -382,7 +383,7 @@ export default function MedicalExportsClientPage() {
 
               <div className="flex justify-center mb-3 md:mb-6">
                 <Image
-                  src="/images/world-health-day.gif"
+                  src="/images/medicine.gif"
                   alt="Animated medical illustration"
                   width={50}
                   height={50}
@@ -391,20 +392,20 @@ export default function MedicalExportsClientPage() {
               </div>
 
               {/* Delivering Health. Ensuring Compliance. */}
-              <p className="font-semibold text-sm md:text-lg mb-4 md:mb-6 text-center" style={{ color: "#0c6f53" }}>
+              <p className="text-center font-semibold text-sm md:text-lg mb-4 md:mb-6" style={{ color: "#0c6f53" }}>
                 Delivering Health. Ensuring Compliance.
               </p>
 
-              <div className="mx-auto max-w-3xl mb-8 md:mb-12 text-left">
+              <div className="mx-auto max-w-3xl mb-8 md:mb-12 text-center">
                 <h3 className="text-lg md:text-xl font-semibold text-[#163764] mb-4">{""}</h3>
-                <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4 text-left">
+                <p className="text-sm md:text-base leading-relaxed text-gray-700 mb-4">
                   We are India's trusted pharmaceutical and medical export specialists, connecting African healthcare
                   providers with high-quality medicines, medical devices, and healthcare solutions. Our expertise spans
                   product sourcing from WHO-GMP certified manufacturers, complete export documentation, regulatory
                   compliance, and reliable cold-chain logistics to ensure your medical supplies arrive safely and on
                   time.
                 </p>
-                <p className="text-sm md:text-base leading-relaxed text-gray-700 text-left">{""}</p>
+                <p className="text-sm md:text-base leading-relaxed text-gray-700">{""}</p>
               </div>
 
               <div className="animate-fade-up animation-delay-600">
@@ -423,89 +424,49 @@ export default function MedicalExportsClientPage() {
         </div>
       </div>
 
-      <div className="bg-gradient-to-r from-[var(--pharma-primary)] to-[var(--pharma-secondary)] py-4 overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Pill className="h-4 w-4 animate-pulse" />
-            WHO-GMP Certified Products
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <ShieldCheck className="h-4 w-4 animate-pulse" />
-            CDSCO Approved Manufacturers
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Ship className="h-4 w-4 animate-pulse" />
-            Global Shipping Network
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Heart className="h-4 w-4 animate-pulse" />
-            Quality Healthcare Solutions
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Globe2 className="h-4 w-4 animate-pulse" />
-            Serving 15+ African Countries
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Users className="h-4 w-4 animate-pulse" />
-            Trusted by 500+ Clients
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <TrendingUp className="h-4 w-4 animate-pulse" />
-            Growing Healthcare Network
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Shield className="h-4 w-4 animate-pulse" />
-            100% Compliance Guaranteed
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Pill className="h-4 w-4 animate-pulse" />
-            WHO-GMP Certified Products
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <ShieldCheck className="h-4 w-4 animate-pulse" />
-            CDSCO Approved Manufacturers
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Ship className="h-4 w-4 animate-pulse" />
-            Global Shipping Network
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Heart className="h-4 w-4 animate-pulse" />
-            Quality Healthcare Solutions
-          </span>
-          <span className="text-white mx-8 flex items-center gap-2">
-            <Globe2 className="h-4 w-4 animate-pulse" />
-            Serving 15+ African Countries
-          </span>
+      <div className="bg-gradient-to-r from-[var(--pharma-primary)] to-[var(--pharma-secondary)] py-4">
+        {/* Accessible, continuous marquee: two identical tracks that animate left */}
+        <div className="marquee overflow-hidden">
+          <div className="marquee-track inline-flex items-center whitespace-nowrap">
+            <span className="text-white mx-8 flex items-center gap-2">
+              <Pill className="h-4 w-4 animate-pulse" />
+              WHO-GMP Certified Products
+            </span>
+            <span className="text-white mx-8 flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4 animate-pulse" />
+              CDSCO Approved Manufacturers
+            </span>
+            <span className="text-white mx-8 flex items-center gap-2">
+              <Ship className="h-4 w-4 animate-pulse" />
+              Global Shipping Network
+            </span>
+            <span className="text-white mx-8 flex items-center gap-2">
+              <Heart className="h-4 w-4 animate-pulse" />
+              Quality Healthcare Solutions
+            </span>
+            <span className="text-white mx-8 flex items-center gap-2">
+              <Globe2 className="h-4 w-4 animate-pulse" />
+              Serving 15+ African Countries
+            </span>
+            <span className="text-white mx-8 flex items-center gap-2">
+              <Users className="h-4 w-4 animate-pulse" />
+              Trusted by 500+ Clients
+            </span>
+            <span className="text-white mx-8 flex items-center gap-2">
+              <TrendingUp className="h-4 w-4 animate-pulse" />
+              Growing Healthcare Network
+            </span>
+            <span className="text-white mx-8 flex items-center gap-2">
+              <Shield className="h-4 w-4 animate-pulse" />
+              100% Compliance Guaranteed
+            </span>
+          </div>
+
+          
         </div>
       </div>
 
-      {/* Quick Stats */}
-      <section className="py-5 pharma-section border-y border-[var(--pharma-border)]">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { icon: Users, label: "Clients", value: "500+", desc: "Active buyers worldwide" },
-              { icon: Globe2, label: "Countries", value: "15+", desc: "Markets served in Africa" },
-              { icon: Package2, label: "SKUs", value: "1,000+", desc: "Products ready to export" },
-              { icon: ShieldCheck, label: "On time delivery", value: "99%", desc: "OTD across shipments" },
-            ].map(({ icon: Icon, label, value, desc }) => (
-              <div key={label} className="rounded-2xl p-[1px] pharma-tile-gradient">
-                <div className="rounded-2xl pharma-tile p-4 flex items-center gap-3 border border-[var(--pharma-border)]">
-                  <div className="h-10 w-10 rounded-full pharma-icon-bg grid place-items-center">
-                    <Icon className="h-5 w-5 pharma-icon" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <p className="text-xs text-[var(--pharma-text-light)]">{label}</p>
-                    <p className="text-lg font-semibold text-[var(--pharma-text)] leading-tight">{value}</p>
-                    <p className="text-[11px] text-[var(--pharma-text-light)] leading-snug">{desc}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Mission & About */}
       <section id="mission" className="py-12 md:py-16 relative overflow-hidden pharma-section">
@@ -1024,6 +985,87 @@ export default function MedicalExportsClientPage() {
               </svg>
               Chat on WhatsApp
             </a>
+          
+            {/* Contact form: posts to /api/contact and opens WhatsApp and mailto */}
+            <form
+              id="contactForm"
+              className="mt-8 max-w-xl mx-auto text-left"
+              onSubmit={(e) => e.preventDefault()}
+            >
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <input name="name" placeholder="Full name" className="w-full rounded-md px-3 py-2 text-sm" id="contact-name" />
+                <input name="email" placeholder="Email" className="w-full rounded-md px-3 py-2 text-sm" id="contact-email" />
+                <input name="company" placeholder="Company (optional)" className="w-full rounded-md px-3 py-2 text-sm sm:col-span-2" id="contact-company" />
+                <input name="phone" placeholder="Phone (optional)" className="w-full rounded-md px-3 py-2 text-sm" id="contact-phone" />
+                <input name="country" placeholder="Country" className="w-full rounded-md px-3 py-2 text-sm" id="contact-country" />
+                <input name="productInterest" placeholder="Product interest (optional)" className="w-full rounded-md px-3 py-2 text-sm" id="contact-product" />
+              </div>
+              <textarea name="message" placeholder="Your message" rows={4} className="w-full mt-3 rounded-md px-3 py-2 text-sm" id="contact-message" />
+
+              <div className="mt-4 flex items-center gap-3">
+                <button
+                  type="button"
+                  id="contact-submit"
+                  onClick={async () => {
+                    const name = (document.getElementById("contact-name") as HTMLInputElement).value
+                    const email = (document.getElementById("contact-email") as HTMLInputElement).value
+                    const company = (document.getElementById("contact-company") as HTMLInputElement).value
+                    const phone = (document.getElementById("contact-phone") as HTMLInputElement).value
+                    const country = (document.getElementById("contact-country") as HTMLInputElement).value
+                    const productInterest = (document.getElementById("contact-product") as HTMLInputElement).value
+                    const message = (document.getElementById("contact-message") as HTMLTextAreaElement).value
+
+                    if (!name || !email || !country || !message) {
+                      alert("Please fill name, email, country and message.")
+                      return
+                    }
+
+                    const payload = { name, email, company, phone, country, productInterest, message }
+
+                    try {
+                      const res = await fetch("/api/contact", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(payload),
+                      })
+                      const json = await res.json()
+
+                      // Open WhatsApp chat if API returned a URL
+                      if (json?.whatsappUrl) {
+                        window.open(json.whatsappUrl, "_blank")
+                      }
+
+                      // Also open user's mail client with a prefilled mail to info@hamadco.in
+                      const mailSubject = encodeURIComponent(`Hamadco Contact: ${name}`)
+                      const mailBody = encodeURIComponent(
+                        `Name: ${name}\nEmail: ${email}\nCompany: ${company || ""}\nPhone: ${phone || ""}\nCountry: ${country}\nProduct Interest: ${productInterest || ""}\n\nMessage:\n${message}`,
+                      )
+                      const mailto = `mailto:info@hamadco.in?subject=${mailSubject}&body=${mailBody}`
+                      window.open(mailto)
+
+                      alert("Thanks — your message was sent. We'll follow up soon.")
+                    } catch (err) {
+                      console.error(err)
+                      alert("Failed to send contact message. Please try opening WhatsApp or email manually.")
+                    }
+                  }}
+                  className="bg-white text-[#163764] font-medium px-4 py-2 rounded-md"
+                >
+                  Send Message
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    // quick open WhatsApp chat link fallback
+                    window.open("https://wa.me/918086890111", "_blank")
+                  }}
+                  className="bg-[#163764] text-white px-4 py-2 rounded-md"
+                >
+                  Chat on WhatsApp
+                </button>
+              </div>
+            </form>
             
           </div>
 
@@ -1060,6 +1102,31 @@ export default function MedicalExportsClientPage() {
         
         .animate-marquee {
           animation: marquee 25s linear infinite;
+        }
+
+        /* New marquee styles for continuous scrolling */
+        .marquee {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+        }
+
+        .marquee-track {
+          display: inline-flex;
+          gap: 0;
+          white-space: nowrap;
+          will-change: transform;
+          animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+
+        /* Respect prefers-reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+          .marquee-track { animation: none; }
         }
         
         .animation-delay-200 {
