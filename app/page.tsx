@@ -7,6 +7,8 @@ import { HomeExtraSections } from "@/components/home-extra-sections"
 import ScrollMarquee from "@/components/scroll-marquee"
 import { GSAPAnimatedSection } from "@/components/gsap-animated-section"
 import { CertificationsSection, GlobalReachSection } from "@/components/business-sections"
+import DisplayCards from "@/components/ui/display-cards"
+import { Ship, Globe2, ShieldCheck } from "lucide-react"
 // Removed decorative background imports
 // import {
 //   GeometricBackground,
@@ -670,6 +672,56 @@ export default function LandingPage() {
           </section>
         </GSAPAnimatedSection>
 
+        {/* Display Cards Section */}
+        <GSAPAnimatedSection animation="fadeUp">
+          <section className="py-12 md:py-16 bg-background">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-4 text-center text-gray-900 md:text-4xl">
+                Export Solutions That Deliver
+              </h2>
+              <p className="text-sm sm:text-base text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                Trusted by businesses worldwide for quality, compliance, and seamless international trade
+              </p>
+              
+              <div className="flex items-center justify-center py-12">
+                <div className="w-full max-w-3xl">
+                  <DisplayCards 
+                    cards={[
+                      {
+                        icon: <Ship className="size-4 text-white" />,
+                        title: "Global Shipping",
+                        description: "Reliable freight solutions worldwide",
+                        date: "24/7 Available",
+                        iconClassName: "text-blue-600",
+                        titleClassName: "text-blue-600",
+                        className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                      },
+                      {
+                        icon: <ShieldCheck className="size-4 text-white" />,
+                        title: "Quality Assurance",
+                        description: "Compliance & certifications",
+                        date: "ISO Certified",
+                        iconClassName: "text-green-600",
+                        titleClassName: "text-green-600",
+                        className: "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
+                      },
+                      {
+                        icon: <Globe2 className="size-4 text-white" />,
+                        title: "Worldwide Reach",
+                        description: "50+ countries served",
+                        date: "Active",
+                        iconClassName: "text-purple-600",
+                        titleClassName: "text-purple-600",
+                        className: "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10",
+                      },
+                    ]} 
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </GSAPAnimatedSection>
+
         {/* Replaced testimonials with workflow */}
         <section id="export-process" className="py-12 md:py-16 bg-background">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -677,9 +729,7 @@ export default function LandingPage() {
             <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-3 md:mb-4 text-gray-900 text-center md:text-5xl">
               {""}
             </h2>
-            <p className="text-sm sm:text-base md:text-lg max-w-3xl mx-auto text-center mb-8 text-primary">
-              Built for compliance, quality, and on time delivery.
-            </p>
+            
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
               {[
                 { title: "Sourcing & QA", desc: "WHO-GMP manufacturers, batch QC, COA verification" },
