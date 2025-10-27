@@ -74,7 +74,7 @@ export function SiteFooter() {
                   href="tel:+918086890111"
                   className="block text-white visited:text-white transition-colors hover:text-[#e3b09f]"
                 >
-                  Phone: +91 8086890111
+                  Phone: +966 599 274 750
                 </a>
               </li>
               <li>
