@@ -519,12 +519,6 @@ export default function LandingPage() {
                 <div className="rounded-2xl border tile-bg-brand backdrop-blur p-6 md:p-8 shadow-lg border-primary">
                   {/* Header */}
                   <div className="text-center mb-8">
-                    <div className="flex justify-center gap-4 mb-4">
-                      <span className="text-4xl">💊</span>
-                      <span className="text-4xl">💉</span>
-                      <span className="text-4xl">🧪</span>
-                      <span className="text-4xl">🩺</span>
-                    </div>
                     <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3">Pharmaceutical Products</h3>
                     <p className="text-gray-600 text-base leading-relaxed max-w-3xl mx-auto">
                       Comprehensive pharmaceutical exports with quality-checked sourcing, regulatory compliance, and specialized logistics for all medical product categories.
@@ -658,21 +652,21 @@ export default function LandingPage() {
                         <span className="text-xl">🚚</span>
                         Specialized Logistics & Services
                       </h4>
-                      <ul className="space-y-2 text-sm text-gray-700">
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                      <ul className="space-y-2 text-sm text-gray-700 text-left md:text-center">
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
                           <span>Cold-chain transportation (2-8°C, -20°C, -70°C)</span>
                         </li>
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
                           <span>Temperature-controlled storage facilities</span>
                         </li>
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
                           <span>Customs clearance and import/export documentation</span>
                         </li>
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
                           <span>Multilingual regulatory support and consultation</span>
                         </li>
                       </ul>
@@ -712,7 +706,7 @@ export default function LandingPage() {
                   <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-6 text-primary md:text-5xl">
                     Our Global Presence
                   </h2>
-                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-justify mb-6 overflow-hidden">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed text-left mb-6 overflow-hidden">
                     Headquartered in India, Hamad Co exports to markets worldwide. Our commitment to timely delivery,
                     strong logistics, and customer-first service has enabled us to build trusted partnerships across
                     Asia, the Middle East, Europe, and Africa.
