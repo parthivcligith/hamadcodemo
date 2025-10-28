@@ -521,7 +521,8 @@ export default function LandingPage() {
                   <div className="text-center mb-8">
                     <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3">Pharmaceutical Products</h3>
                     <p className="text-gray-600 text-base leading-relaxed max-w-3xl mx-auto">
-                      Comprehensive pharmaceutical exports with quality-checked sourcing, regulatory compliance, and specialized logistics for all medical product categories.
+                      Comprehensive pharmaceutical exports with quality-checked sourcing, regulatory compliance, and
+                      specialized logistics for all medical product categories.
                     </p>
                   </div>
 
@@ -623,24 +624,35 @@ export default function LandingPage() {
                     {/* Quality Assurance */}
                     <div className="text-center">
                       <h4 className="font-semibold text-gray-900 mb-4 flex items-center justify-center gap-2">
-                        <span className="text-xl">✅</span>
                         Quality Assurance & Compliance
                       </h4>
                       <ul className="space-y-2 text-sm text-gray-700">
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>GMP certified manufacturing facilities</span>
                         </li>
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>Complete regulatory documentation (COA, MSDS, Batch records)</span>
                         </li>
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>Third-party quality testing and validation</span>
                         </li>
-                        <li className="flex items-center justify-center gap-2">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                        <li className="flex items-start md:items-center gap-2 md:justify-center">
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>FDA, EMA, and WHO pre-qualification support</span>
                         </li>
                       </ul>
@@ -649,24 +661,35 @@ export default function LandingPage() {
                     {/* Specialized Services */}
                     <div className="text-center">
                       <h4 className="font-semibold text-gray-900 mb-4 flex items-center justify-center gap-2">
-                        <span className="text-xl">🚚</span>
                         Specialized Logistics & Services
                       </h4>
                       <ul className="space-y-2 text-sm text-gray-700 text-left md:text-center">
                         <li className="flex items-start md:items-center gap-2 md:justify-center">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>Cold-chain transportation (2-8°C, -20°C, -70°C)</span>
                         </li>
                         <li className="flex items-start md:items-center gap-2 md:justify-center">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>Temperature-controlled storage facilities</span>
                         </li>
                         <li className="flex items-start md:items-center gap-2 md:justify-center">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>Customs clearance and import/export documentation</span>
                         </li>
                         <li className="flex items-start md:items-center gap-2 md:justify-center">
-                          <span className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0" style={{ backgroundColor: "#92301A" }}></span>
+                          <span
+                            className="inline-block h-1.5 w-1.5 rounded-full mt-1 md:mt-0 flex-shrink-0"
+                            style={{ backgroundColor: "#92301A" }}
+                          ></span>
                           <span>Multilingual regulatory support and consultation</span>
                         </li>
                       </ul>
@@ -675,8 +698,9 @@ export default function LandingPage() {
 
                   {/* Product Categories Tags */}
                   <div className="mt-8 pt-6 border-t border-gray-200">
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {["Generics", "Branded", "APIs", "OTC", "Prescription", "Vaccines", "Cold-chain", "Sterile", "Non-sterile", "Controlled Substances"].map((tag) => (
+                    <div className="flex flex-wrap justify-center gap-3">
+                      {/* Product Type */}
+                      {["Generics", "Branded", "OTC"].map((tag) => (
                         <span
                           key={tag}
                           className="px-3 py-1 rounded-full border text-xs font-medium"
@@ -685,6 +709,30 @@ export default function LandingPage() {
                           {tag}
                         </span>
                       ))}
+
+                      {/* Regulatory */}
+                      {["Prescription", "APIs", "Controlled"].map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 rounded-full border text-xs font-medium"
+                          style={{ borderColor: "#92301A", color: "#92301A", backgroundColor: "#FDEBD0" }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+
+                      {/* Specialized */}
+                      {["Vaccines", "Sterile", "Non-sterile"].map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 rounded-full border text-xs font-medium"
+                          style={{ borderColor: "#92301A", color: "#92301A", backgroundColor: "#FDEBD0" }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+
+                      
                     </div>
                   </div>
                 </div>
