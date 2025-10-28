@@ -369,7 +369,7 @@ export default function LandingPage() {
                   <div className="space-y-6">
                     <h3 className="font-serif font-bold text-gray-900 text-2xl">Message from the Founder</h3>
                     <div className="beige-card-soft p-6 rounded-lg border-l-4 border-primary">
-                      <p className="text-sm sm:text-base leading-relaxed text-justify italic mb-4 text-foreground">
+                      <p className="text-sm sm:text-base leading-relaxed text-left mb-4 text-foreground">
                         "When I started Hamad Co, my vision was simple: to build a company that stands for trust and
                         quality while making India proud in global markets. Today, with our expanding reach and growing
                         customer base, I am proud that we are living that vision every day. Our focus will always remain
@@ -515,70 +515,182 @@ export default function LandingPage() {
               </GSAPAnimatedSection>
 
               <GSAPAnimatedSection animation="fadeUp" className="overflow-hidden">
-                {/* make the large "Pharmaceutical Products" panel background #fee3bd */}
-                <div className="rounded-2xl border tile-bg-brand backdrop-blur p-6 md:p-8 shadow-lg flex flex-col md:flex-row gap-8 md:gap-10 items-stretch border-primary">
-                  {/* Left compact card */}
-                  {/* Products left compact card uses soft tile background */}
-                  {/* left compact pharma card to exact #fee3bd */}
-                  <Card className="bg-background shadow-sm border rounded-2xl h-full">
-                    <CardContent className="p-6 md:p-8 flex flex-col items-center text-center">
-                      <div aria-hidden className="text-4xl mb-4">
-                        💊
-                      </div>
-                      <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-3">Pharmaceutical Products</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        We specialize exclusively in pharmaceutical exports—quality-checked and compliance-ready.
-                      </p>
-                      {/* Category chips */}
-                      <div className="mt-4 flex flex-wrap justify-center gap-2">
-                        {["Generics", "Branded", "APIs", "OTC", "Vaccines", "Cold-chain"].map((tag) => (
-                          <span
-                            key={tag}
-                            className="px-2 py-1 rounded-full border text-[10px] md:text-xs"
-                            style={{ borderColor: "#92301A", color: "#92301A", backgroundColor: "#FDEBD0" }}
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                  {/* </CHANGE> */}
+                {/* Enhanced Pharmaceutical Products Section */}
+                <div className="rounded-2xl border tile-bg-brand backdrop-blur p-6 md:p-8 shadow-lg border-primary">
+                  {/* Header */}
+                  <div className="text-center mb-8">
+                    <div className="flex justify-center gap-4 mb-4">
+                      <span className="text-4xl">💊</span>
+                      <span className="text-4xl">💉</span>
+                      <span className="text-4xl">🧪</span>
+                      <span className="text-4xl">🩺</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-3">Pharmaceutical Products</h3>
+                    <p className="text-gray-600 text-base leading-relaxed max-w-3xl mx-auto">
+                      Comprehensive pharmaceutical exports with quality-checked sourcing, regulatory compliance, and specialized logistics for all medical product categories.
+                    </p>
+                  </div>
 
-                  {/* Right wide content panel */}
-                  {/* change container from grid content-center to flex column so chips don't get vertically centered and can wrap naturally */}
-                  <div className="flex-1 flex flex-col gap-6 justify-start">
-                    {/* Horizontal, sleek bullet lines */}
-                    <ul className="grid gap-3 text-sm md:text-base text-gray-800">
-                      {[
-                        "Quality-checked sourcing and batch traceability",
-                        "Regulatory documentation ready (COA, MSDS, GMP)",
-                        "Cold-chain and controlled logistics for sensitive products",
-                      ].map((item) => (
-                        <li key={item} className="flex items-center gap-3">
-                          <span
-                            className="inline-block h-2 w-2 rounded-full"
-                            style={{ backgroundColor: "#92301A" }}
-                            aria-hidden
-                          />
-                          <span className="leading-relaxed text-left">{item}</span>
+                  {/* Product Categories Grid */}
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {/* Tablets & Capsules */}
+                    <Card className="bg-background shadow-sm border rounded-xl p-6 hover:shadow-md transition-shadow">
+                      <CardContent className="text-center">
+                        <div className="text-3xl mb-3">💊</div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Tablets & Capsules</h4>
+                        <p className="text-sm text-gray-600 mb-3">Solid oral dosage forms</p>
+                        <ul className="text-xs text-gray-700 space-y-1 text-center">
+                          <li>• Immediate & extended release</li>
+                          <li>• Enteric coated formulations</li>
+                          <li>• Hard & soft gelatin capsules</li>
+                          <li>• Film-coated tablets</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    {/* Liquid Medications */}
+                    <Card className="bg-background shadow-sm border rounded-xl p-6 hover:shadow-md transition-shadow">
+                      <CardContent className="text-center">
+                        <div className="text-3xl mb-3">🧴</div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Syrups & Solutions</h4>
+                        <p className="text-sm text-gray-600 mb-3">Liquid pharmaceutical forms</p>
+                        <ul className="text-xs text-gray-700 space-y-1 text-center">
+                          <li>• Pediatric syrups</li>
+                          <li>• Oral suspensions</li>
+                          <li>• Injectable solutions</li>
+                          <li>• Topical lotions</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    {/* Injections */}
+                    <Card className="bg-background shadow-sm border rounded-xl p-6 hover:shadow-md transition-shadow">
+                      <CardContent className="text-center">
+                        <div className="text-3xl mb-3">💉</div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Injections & Vials</h4>
+                        <p className="text-sm text-gray-600 mb-3">Parenteral medications</p>
+                        <ul className="text-xs text-gray-700 space-y-1 text-center">
+                          <li>• IV/IM injections</li>
+                          <li>• Pre-filled syringes</li>
+                          <li>• Lyophilized powders</li>
+                          <li>• Sterile vials</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    {/* Vaccines */}
+                    <Card className="bg-background shadow-sm border rounded-xl p-6 hover:shadow-md transition-shadow">
+                      <CardContent className="text-center">
+                        <div className="text-3xl mb-3">🦠</div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Vaccines</h4>
+                        <p className="text-sm text-gray-600 mb-3">Immunization products</p>
+                        <ul className="text-xs text-gray-700 space-y-1 text-center">
+                          <li>• Live & inactivated vaccines</li>
+                          <li>• mRNA vaccines</li>
+                          <li>• Cold-chain storage</li>
+                          <li>• Temperature monitoring</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    {/* APIs */}
+                    <Card className="bg-background shadow-sm border rounded-xl p-6 hover:shadow-md transition-shadow">
+                      <CardContent className="text-center">
+                        <div className="text-3xl mb-3">🧪</div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Active Ingredients</h4>
+                        <p className="text-sm text-gray-600 mb-3">Pharmaceutical APIs</p>
+                        <ul className="text-xs text-gray-700 space-y-1 text-center">
+                          <li>• Bulk pharmaceutical chemicals</li>
+                          <li>• GMP certified facilities</li>
+                          <li>• Certificate of Analysis</li>
+                          <li>• Stability testing</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    {/* Medical Devices */}
+                    <Card className="bg-background shadow-sm border rounded-xl p-6 hover:shadow-md transition-shadow">
+                      <CardContent className="text-center">
+                        <div className="text-3xl mb-3">🩺</div>
+                        <h4 className="font-semibold text-gray-900 mb-2">Medical Devices</h4>
+                        <p className="text-sm text-gray-600 mb-3">Diagnostic & therapeutic equipment</p>
+                        <ul className="text-xs text-gray-700 space-y-1 text-center">
+                          <li>• Diagnostic instruments</li>
+                          <li>• Surgical equipment</li>
+                          <li>• Monitoring devices</li>
+                          <li>• Disposable supplies</li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Key Features */}
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {/* Quality Assurance */}
+                    <div className="text-center">
+                      <h4 className="font-semibold text-gray-900 mb-4 flex items-center justify-center gap-2">
+                        <span className="text-xl">✅</span>
+                        Quality Assurance & Compliance
+                      </h4>
+                      <ul className="space-y-2 text-sm text-gray-700">
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>GMP certified manufacturing facilities</span>
                         </li>
-                      ))}
-                    </ul>
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>Complete regulatory documentation (COA, MSDS, Batch records)</span>
+                        </li>
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>Third-party quality testing and validation</span>
+                        </li>
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>FDA, EMA, and WHO pre-qualification support</span>
+                        </li>
+                      </ul>
+                    </div>
 
-                    {/* Row of small feature chips */}
-                    <div className="flex flex-wrap items-center gap-2 border-primary">
-                      {["Regulatory Support", "Global Fulfillment", "Cold-chain Expertise", "Multilingual Service"].map(
-                        (label) => (
-                          <span
-                            key={label}
-                            className="inline-flex items-center rounded-full border px-3 py-1 text-[11px] md:text-xs whitespace-nowrap leading-none border-primary text-primary border-solid bg-background"
-                            style={{ borderColor: "#e5e7eb" }}
-                          >
-                            {label}
-                          </span>
-                        ),
-                      )}
+                    {/* Specialized Services */}
+                    <div className="text-center">
+                      <h4 className="font-semibold text-gray-900 mb-4 flex items-center justify-center gap-2">
+                        <span className="text-xl">🚚</span>
+                        Specialized Logistics & Services
+                      </h4>
+                      <ul className="space-y-2 text-sm text-gray-700">
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>Cold-chain transportation (2-8°C, -20°C, -70°C)</span>
+                        </li>
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>Temperature-controlled storage facilities</span>
+                        </li>
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>Customs clearance and import/export documentation</span>
+                        </li>
+                        <li className="flex items-center justify-center gap-2">
+                          <span className="inline-block h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#92301A" }}></span>
+                          <span>Multilingual regulatory support and consultation</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  {/* Product Categories Tags */}
+                  <div className="mt-8 pt-6 border-t border-gray-200">
+                    <div className="flex flex-wrap justify-center gap-2">
+                      {["Generics", "Branded", "APIs", "OTC", "Prescription", "Vaccines", "Cold-chain", "Sterile", "Non-sterile", "Controlled Substances"].map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-3 py-1 rounded-full border text-xs font-medium"
+                          style={{ borderColor: "#92301A", color: "#92301A", backgroundColor: "#FDEBD0" }}
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 </div>
