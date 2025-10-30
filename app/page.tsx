@@ -837,41 +837,7 @@ export default function LandingPage() {
                 Trusted by businesses worldwide for quality, compliance, and seamless international trade
               </p>
               
-              <div className="flex items-center justify-center py-12">
-                <div className="w-full max-w-3xl">
-                  <DisplayCards 
-                    cards={[
-                      {
-                        icon: <Ship className="size-4 text-white" />,
-                        title: "Global Shipping",
-                        description: "Reliable freight solutions worldwide",
-                        date: "24/7 Available",
-                        iconClassName: "text-blue-600",
-                        titleClassName: "text-blue-600",
-                        className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
-                      },
-                      {
-                        icon: <ShieldCheck className="size-4 text-white" />,
-                        title: "Quality Assurance",
-                        description: "Compliance & certifications",
-                        date: "ISO Certified",
-                        iconClassName: "text-green-600",
-                        titleClassName: "text-green-600",
-                        className: "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration-700 hover:grayscale-0 before:left-0 before:top-0",
-                      },
-                      {
-                        icon: <Globe2 className="size-4 text-white" />,
-                        title: "Worldwide Reach",
-                        description: "50+ countries served",
-                        date: "Active",
-                        iconClassName: "text-purple-600",
-                        titleClassName: "text-purple-600",
-                        className: "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10",
-                      },
-                    ]} 
-                  />
-                </div>
-              </div>
+              
             </div>
           </section>
         </GSAPAnimatedSection>
